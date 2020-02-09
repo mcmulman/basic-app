@@ -52,6 +52,17 @@ body > header {
 #toggle {
   display: inline-block;
   padding: 1rem;
+
+  svg {
+    fill: #fff;
+    transition: fill .3s;
+  }
+
+  &:hover svg,
+  &:focus svg,
+  &:active svg {
+    fill: #000;
+  }
 }
 
 /* Create two unequal columns that sits next to each other */
