@@ -1,0 +1,14 @@
+/* Page */
+html,
+body {
+  min-height: 100vh;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: Helvetica, sans-serif;
+}
+html > *,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
