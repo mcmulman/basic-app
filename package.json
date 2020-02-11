@@ -14,12 +14,13 @@
     "watch": "^1.0.x"
   },
   "scripts": {
-    "serve": "lserver",
-    "js": "babel src/js/ -d dist/ --presets=es2015,minify",
     "css": "node-sass src/scss/main.scss -o dist/ --output-style compressed",
-    "post": "postcss dist/main.css -d dist/ --use autoprefixer",
-    "build": "npm run css && npm run post && npm run js",
+    "postcss": "postcss dist/main.css -d dist/ --use autoprefixer",
+    "js": "babel src/js/ -d dist/ --presets=es2015,minify",
+
+    "build": "npm run css && npm run js",
     "b": "npm run build",
-    "watch": "watch 'npm run build'"
+    "watch": "watch 'npm run b' src/",
+    "serve": "lserver"
   }
 }
